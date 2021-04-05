@@ -9,7 +9,7 @@ int main(){
 	if (ch >= 'A' && ch <= 'Z'){
 		printf("Lowecase of %c is %c\n", ch, ch + 32);
 	}else if(ch >= 'a' && ch <= 'z'){
-		printf("Uppercase of %c is %c\n", ch , ch + 32);
+		printf("Uppercase of %c is %c\n", ch , ch - 32);
 		}else {
 			printf("Invalid Letter\n");
 		}

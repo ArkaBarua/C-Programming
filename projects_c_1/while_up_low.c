@@ -2,7 +2,7 @@
 
 int main(){
 
-    char name[20];
+    char name[30];
     int i= 0;
 
      printf("Enter a string: ");

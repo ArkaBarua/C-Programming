@@ -27,6 +27,14 @@ if ((year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0)){
 else{
     is_leapyear = 0;
 }
-printf("%d\n", is_leapyear);
+switch(is_leapyear){
+	case 1:
+	printf("Year %d is a leap year\n", year);
+    break;
+    case 0:
+    printf("Year %d is not a leap year\n", year);
+    break;
+
+}
     return 0;
 }
