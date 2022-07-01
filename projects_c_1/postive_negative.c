@@ -1,6 +1,7 @@
-#include<stdio.h>
+#include <stdio.h>
 
-int main(){
+int main()
+{
     double a;
 
     printf("Enter a number (No Space):");
@@ -10,10 +11,12 @@ int main(){
     {
         printf("This is a Positive Number\n");
     }
-    else if (a < 0){
+    else if (a < 0)
+    {
         printf("This is a Negative number\n");
     }
-    else if (a == 0){
+    else if (a == 0)
+    {
         printf("The number is Zero\n");
     }
     return 0;

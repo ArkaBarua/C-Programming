@@ -1,10 +1,12 @@
-#include<stdio.h>
+#include <stdio.h>
 
-int main(){
+int main()
+{
 
   int i;
-  for (i = 1; i <= 100; i++){
+  for (i = 1; i <= 100; i++)
+  {
     printf("%d - Arka Barua\n", i);
   }
-    return 0;
+  return 0;
 }

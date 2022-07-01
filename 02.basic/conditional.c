@@ -1,7 +1,8 @@
-#include<stdio.h>
+#include <stdio.h>
 
-int main(){
-    int a = 27 ;
+int main()
+{
+    int a = 27;
     int b = 26;
 
     int c = a > b ? 1 : 0;
@@ -11,8 +12,7 @@ int main(){
     printf("Result= %d\n", d);
 
     int f = a != b ? 1 : 0;
-   printf("Result= %d\n", f);
-
+    printf("Result= %d\n", f);
 
     return 0;
 }

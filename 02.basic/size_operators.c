@@ -1,6 +1,7 @@
-#include<stdio.h>
+#include <stdio.h>
 
-int main(){
+int main()
+{
     char a = 'A';
     short b = 121;
     int c = 32343;
@@ -14,4 +15,4 @@ int main(){
     printf("Size of Long Long = %d\n", (int)sizeof(e));
 
     return 0;
-    }
+}

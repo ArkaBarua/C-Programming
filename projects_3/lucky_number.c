@@ -4,7 +4,7 @@
 
 int main()
 {
-    //this is a static program
+    // this is a static program
     /** const int PICKED_NUMBER = 9;
     int given_number;
 

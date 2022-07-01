@@ -9,7 +9,7 @@ int main()
     scores[3] = 89;
     scores[4] = 91;
 
-    //find sum of Scores
+    // find sum of Scores
     int sum = 0, i;
     for (i = 0; i < 5; i++)
     {
@@ -17,9 +17,9 @@ int main()
     }
     printf("Sum = %d\n", sum);
 
-    //find average score
+    // find average score
     printf("Average Score = %d\n", sum / i);
-    //find highest score
+    // find highest score
     int max = scores[0];
     for (i = 0; i < 5; i++)
     {
@@ -30,7 +30,7 @@ int main()
     }
     printf("Highest score = %d\n", max);
 
-    //minimum score
+    // minimum score
     int min = scores[0];
     for (i = 0; i < 5; i++)
     {

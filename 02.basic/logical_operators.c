@@ -1,30 +1,30 @@
-#include<stdio.h>
-// ! #include<stint.h>  - /media/arkabarua/New\ Volume/C_programming/exam/01.c
-#include<stdbool.h>
+#include <stdio.h>
+#include <stdbool.h>
 
-int main(){
+int main()
+{
     bool has_nid = false;
     bool has_passport = true;
     bool is_adult = true;
-    //int has_id = has_nid || has_passport;
+    // int has_id = has_nid || has_passport;
 
-    //printf("Id - %d\n", has_id);
+    // printf("Id - %d\n", has_id);
 
-   bool is_permited = (has_nid || has_passport) && is_adult;
+    bool is_permited = (has_nid || has_passport) && is_adult;
 
     printf("Permission - %d\n", is_permited);
-    
-    //{
-bool a = 60;
-bool b = 60;
-bool not_same = a != b;
-printf("%d\n", not_same);
 
-//}
+    //{
+    bool a = 60;
+    bool b = 60;
+    bool not_same = a != b;
+    printf("%d\n", not_same);
+
+    //}
     return 0;
 }
 /*
-    Logical And 
+    Logical And
     -------------
 
     A       B       Result

@@ -9,7 +9,7 @@ int main()
     while (ch == 'c')
     {
         if (ch == 'c' || 'q')
-        { //if user enters c or q the program will run or else it will tell an error
+        { // if user enters c or q the program will run or else it will tell an error
 
             printf("Enter your operations +, -, /, * ( 10 + 20) :\n");
             scanf("%lf %c %lf", &first_num, &operator, & second_num);

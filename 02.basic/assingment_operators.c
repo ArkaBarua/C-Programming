@@ -1,26 +1,27 @@
-#include<stdio.h>
+#include <stdio.h>
 
-int main(void){
-    int a = 10 ;
-    //a = a + 5;
+int main(void)
+{
+    int a = 10;
+    // a = a + 5;
     a += 5;
-    printf("%d\n",a);//15
+    printf("%d\n", a); // 15
 
-    //a = a - 5;
+    // a = a - 5;
     a -= 5;
-    printf("%d\n",a);//10
+    printf("%d\n", a); // 10
 
     // a = a * 5;
     a *= 5;
-    printf("%d\n",a);//50
+    printf("%d\n", a); // 50
 
-    //a = a / 5 ;
+    // a = a / 5 ;
     a /= 5;
-    printf("%d\n",a);//10
+    printf("%d\n", a); // 10
 
-    //a = a % 5 ;
+    // a = a % 5 ;
     a %= 5;
-    printf("%d\n",a);//0
-    
+    printf("%d\n", a); // 0
+
     return 0;
 }

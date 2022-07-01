@@ -29,7 +29,7 @@ int main()
         printf("--------------\n");
 
         printf("Enter a menu: ");
-        scanf("%d", &input);
+        scanf("%d", &input); // input user's option
 
         system("clear");
         printf("------- Result -------\n");
@@ -55,6 +55,7 @@ int main()
             scanf("%d", &value);
             printf("Please enter an idex between 0 - %d: ", length - 1);
             scanf("%d", &index);
+
             if (index > (length - 1) || index < 0)
             {
                 printf("!Please enter an index between 0 - %d\n", length - 1);
@@ -70,6 +71,7 @@ int main()
                 length++;
                 printf("Your data has been inserted\n");
             }
+
             break;
 
         case 3:
@@ -81,6 +83,7 @@ int main()
 
             data[index] = value;
             printf("%d edited at index %d\n", value, index);
+
             break;
 
         case 4:
@@ -102,6 +105,7 @@ int main()
                 length--;
                 printf("Deleted value %d from index %d\n", del, index);
             }
+
             break;
 
         case 5:
@@ -122,6 +126,7 @@ int main()
                 printf("------Result End------\n");
                 break;
             }
+
         case 6:
             for (int i = 0; i < length; i++)
             {
@@ -129,6 +134,7 @@ int main()
             }
             length = 0;
             printf("Data cleared\n");
+            
             break;
         case 0:
             // Do noting

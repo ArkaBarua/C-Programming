@@ -1,34 +1,35 @@
-#include<stdio.h>
+#include <stdio.h>
 
-int main(){
+int main()
+{
     int i, j, rows;
     printf("Enter the number of rows:");
-    scanf("%d",&rows);
+    scanf("%d", &rows);
 
-// half pyramid
-for (i = 0; i < rows; i++)
-{
- 
-    for ( j = 0; j <= i; j++)
+    // half pyramid
+    for (i = 0; i < rows; i++)
     {
-        printf("* ");
-    }
-    printf("\n");
-}
-printf("\n\n");
 
-
-//full pyramid
-for(i = 0; i < rows;i++){
-    for(j = i +1; j < rows; j++){
-        printf(" ");
+        for (j = 0; j <= i; j++)
+        {
+            printf("* ");
+        }
+        printf("\n");
     }
-    for ( j = 0; j <= i; j++)
+    printf("\n\n");
+
+    // full pyramid
+    for (i = 0; i < rows; i++)
     {
-        printf("* ");
+        for (j = i + 1; j < rows; j++)
+        {
+            printf(" ");
+        }
+        for (j = 0; j <= i; j++)
+        {
+            printf("* ");
+        }
+        printf("\n");
     }
-    printf("\n");
-
-}
     return 0;
 }
