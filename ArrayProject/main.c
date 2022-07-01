@@ -14,7 +14,8 @@ int main()
     system("clear");      // clearing the terminal; Linux/Mac = clear; windows = cls
     int data[MAX_LENGTH]; // array to store the data
     int length = 0;       // array length
-    int input, value, index;
+    int input, value, index, max, min, sum;
+    float avg;
     do
     { // Menu and options
         printf("Menu: \n");
@@ -25,6 +26,10 @@ int main()
         printf("4. Delete \n");
         printf("5. Display\n");
         printf("6. Clear\n");
+        printf("7. Max\n");
+        printf("8. Min\n");
+        printf("9. Sum\n");
+        // printf("10. Average\n");
         printf("0. Exit\n");
         printf("--------------\n");
 
@@ -134,12 +139,53 @@ int main()
             }
             length = 0;
             printf("Data cleared\n");
-            
+
             break;
+        case 7:
+            max = data[0];
+            for (int i = 0; i < length; i++)
+            {
+                if (max < data[i])
+                {
+                    max = data[i];
+                }
+            }
+            printf("Maximum value is %d\n", max);
+
+            break;
+        case 8:
+            min = data[0];
+            for (int i = 0; i < length; i++)
+            {
+                if (min > data[i])
+                {
+                    min = data[i];
+                }
+            }
+            printf("Minimum value is %d\n", min);
+            break;
+        case 9:
+            sum = 0;
+            for (int i = 0; i < length; i++)
+            {
+                sum += data[i];
+            }
+            printf("Sum = %d\n", sum);
+            break;
+        /**case 10:
+            sum = 0;
+            for (int i = 0; i < length; i++)
+            {
+                sum += data[i];
+            }
+            avg = sum / (length + 1);
+            printf("Average = %f\n", avg);
+
+            break;
+            **/
         case 0:
             // Do noting
             break;
-
         default:
             printf("Invalid Input\n");
             break;
@@ -147,7 +193,6 @@ int main()
 
     } while (input != 0);
     system("clear");
-
     return 0;
 }
 /**
