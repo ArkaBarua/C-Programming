@@ -13,8 +13,7 @@ int main(){
     system("clear"); 
     int data[MAX_LENGTH];
     int length = 0;
-    int input;
-    int value;
+    int input, value, index;
     do{ printf("Menu: \n");
         printf("-------------\n");
         printf("1. Add \n");
@@ -48,7 +47,24 @@ int main(){
 
             break;
 
-        case 2: 
+        case 2:
+	    // insert operation
+	    printf("Please enter an integer value: ");
+	    scanf("%d", &value);
+	    printf("Please enter an idex between 0 - %d: ",length);
+	    scanf("%d", &index);
+	if (index > length || index < 0){
+		printf("!Pleae enter an index between 0 - %d\n", length);
+	
+	}else{
+
+	    for(int i = length; i > index;i--){
+		    data[i] = data[i -1];
+	    }
+	    data[index] = value;
+	    length++;
+	    printf("Your data has been insterted\n");
+	}
             break;
 
         case 3: 
@@ -58,6 +74,7 @@ int main(){
             break;
 
         case 5:
+	 // Display data      
         if (length == 0) {
             printf("There is no data\n");
         }
@@ -67,11 +84,11 @@ int main(){
         {
             printf("%d\t",data[i]);
         }
-        
+       	 
+	    printf("\n");
+	    printf("------Result End------\n");
             break;
         }
-        // Display items using a for loop
-        
         case 6: 
         for (int i = 0; i < length; i++)
         {
