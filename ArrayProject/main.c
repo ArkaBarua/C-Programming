@@ -29,7 +29,8 @@ int main()
         printf("7. Max\n");
         printf("8. Min\n");
         printf("9. Sum\n");
-        // printf("10. Average\n");
+        printf("10. Average\n");
+        printf("11. Search\n");
         printf("0. Exit\n");
         printf("--------------\n");
 
@@ -172,15 +173,26 @@ int main()
             }
             printf("Sum = %d\n", sum);
             break;
-        /**case 10:
+        case 10:
             sum = 0;
             for (int i = 0; i < length; i++)
             {
                 sum += data[i];
             }
-            avg = sum / (length + 1);
-            printf("Average = %f\n", avg);
+            avg = (float)sum / ((float)length);
+            printf("Average = %.3f\n", avg);
+            break;
+            /** case 11:
+             printf("Please enter the number to search: ");
+             scanf("%d",&input);
 
+             for (int i = 0; i < length; i++)
+            {
+                if (input == data[i])
+                {
+                    index = data[i];
+                }
+            }
             break;
             **/
         case 0:
@@ -196,12 +208,6 @@ int main()
     return 0;
 }
 /**
- *
- * Min
- * Max
- * Sum
- * Average
  * Search
  * Sort
- *
  **/
