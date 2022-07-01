@@ -43,7 +43,7 @@ int main()
             scanf("%d", &value);
 
             data[length] = value;
-            printf("%d insered at index %d\n", value, length);
+            printf("%d inserted at index %d\n", value, length);
 
             length++;
 
