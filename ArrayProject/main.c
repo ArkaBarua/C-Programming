@@ -14,7 +14,7 @@ int main()
     system("clear");      // clearing the terminal; Linux/Mac = clear; windows = cls
     int data[MAX_LENGTH]; // array to store the data
     int length = 0;       // array length
-    int input, value, index, max, min, sum;
+    int input, value, index, max, min, sum, temp;
     float avg;
     do
     { // Menu and options
@@ -31,6 +31,7 @@ int main()
         printf("9. Sum\n");
         printf("10. Average\n");
         printf("11. Search\n");
+        printf("12. Sort\n");
         printf("0. Exit\n");
         printf("--------------\n");
 
@@ -53,6 +54,7 @@ int main()
 
             length++;
 
+            printf("------Result End------\n");
             break;
 
         case 2:
@@ -78,6 +80,7 @@ int main()
                 printf("Your data has been inserted\n");
             }
 
+            printf("------Result End------\n");
             break;
 
         case 3:
@@ -90,6 +93,7 @@ int main()
             data[index] = value;
             printf("%d edited at index %d\n", value, index);
 
+            printf("------Result End------\n");
             break;
 
         case 4:
@@ -112,6 +116,7 @@ int main()
                 printf("Deleted value %d from index %d\n", del, index);
             }
 
+            printf("------Result End------\n");
             break;
 
         case 5:
@@ -129,11 +134,11 @@ int main()
                 }
 
                 printf("\n");
-                printf("------Result End------\n");
-                break;
             }
-
+            printf("------Result End------\n");
+            break;
         case 6:
+            // Clear operation to clear all values
             for (int i = 0; i < length; i++)
             {
                 data[i] = 0;
@@ -141,8 +146,10 @@ int main()
             length = 0;
             printf("Data cleared\n");
 
+            printf("------Result End------\n");
             break;
         case 7:
+            // Maximum operation
             max = data[0];
             for (int i = 0; i < length; i++)
             {
@@ -153,8 +160,10 @@ int main()
             }
             printf("Maximum value is %d\n", max);
 
+            printf("------Result End------\n");
             break;
         case 8:
+            // Minimum operation
             min = data[0];
             for (int i = 0; i < length; i++)
             {
@@ -164,16 +173,22 @@ int main()
                 }
             }
             printf("Minimum value is %d\n", min);
+
+            printf("------Result End------\n");
             break;
         case 9:
+            // Sum operation
             sum = 0;
             for (int i = 0; i < length; i++)
             {
                 sum += data[i];
             }
             printf("Sum = %d\n", sum);
+
+            printf("------Result End------\n");
             break;
         case 10:
+            // Average operation
             sum = 0;
             for (int i = 0; i < length; i++)
             {
@@ -181,20 +196,54 @@ int main()
             }
             avg = (float)sum / ((float)length);
             printf("Average = %.3f\n", avg);
-            break;
-            /** case 11:
-             printf("Please enter the number to search: ");
-             scanf("%d",&input);
 
-             for (int i = 0; i < length; i++)
+            printf("------Result End------\n");
+            break;
+        case 11:
+            printf("Please enter the number to search: ");
+            scanf("%d", &input);
+            int j = 0;
+            index = -1;
+            for (j; j < length; j++)
             {
-                if (input == data[i])
+                if (input == data[j])
                 {
-                    index = data[i];
+                    index = j;
+                    break;
                 }
             }
+            if (index < 0)
+            {
+                printf("Value %d not found\n", input);
+            }
+            else
+            {
+                printf("Value %d found at index %d\n", input, index);
+            }
+
+            printf("------Result End------\n");
             break;
-            **/
+
+            // case 12:
+            //     for (int i = 0; i < length - 1; i++)
+            //     {
+            //         for (j = 0; j < length + 1; j++)
+            //         {
+            //             if (data[i] < data[j])
+            //             {
+            //                 temp = data[j];
+            //                 data[i] = data[j];
+            //                 data[j] = temp;
+            //             }
+            //         }
+            //     }
+            //     for (int i = 0; i < length; i++)
+            //     {
+            //         printf("%d\t", data[i]);
+            //         printf("\n");
+            //     }
+
+            // break;
         case 0:
             // Do noting
             break;
