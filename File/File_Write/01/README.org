@@ -3,6 +3,7 @@
 #+AUTHOR: Arka Barua
 #+EXPORT_FILE_NAME: /home/arka/filec.html
 #+PROPERTY: header-args :tangle file_1.c
+#+OPTIONS: toc:nil num:nil
 #+SETUPFILE: https://fniessen.github.io/org-html-themes/org/theme-readtheorg.setup
 
 

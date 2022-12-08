@@ -1,6 +1,7 @@
 #+TITLE: Working with files in C programming
 #+AUTHOR: Arka Barua
 #+DESCRIPTION: How to work with files in c
+#+OPTIONS: toc:nil num:nil
 #+DATA:Thu Dec 8 2022
 
 * List of operations
