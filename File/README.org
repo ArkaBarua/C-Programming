@@ -1,0 +1,21 @@
+#+TITLE: Working with files in C programming
+#+AUTHOR: Arka Barua
+#+DESCRIPTION: How to work with files in c
+#+DATA:Thu Dec 8 2022
+
+* List of operations
+** File Open
+** File Read
+** File Write
+** File close
+
+* Mode & Description
+After opening a file in c using the *fopen()* the second parameter must be a string (w/r/a/w+/r+/a+), which will indicate what to do with the file.
+| Mode | DESCRIPTION                                                                                                                                                                     |
+|------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| r    | Opens an existing text file for reading purpose                                                                                                                                 |
+| w    | Opens a text file for writing. If it does not exist, then a new file is created. Here your program will start writing content from the beginning of the file.                   |
+| a    | Opens a text file for writing in appending mode. If it does not exist, then a new file is created. Here your program will start appending content in the existing file content. |
+| w+   | Opens a text file for both reading and writing. It first truncates the file to zero length if it exists, otherwise creates a file if it does not exist.                         |
+| r+   | Opens a text file for both reading and writing.                                                                                                                                 |
+| a+   | Opens a text file for both reading and writing. It creates the file if it does not exist. The reading will start from the beginning but writing can only be appended.           |

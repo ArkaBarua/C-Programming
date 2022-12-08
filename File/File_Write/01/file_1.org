@@ -1,0 +1,62 @@
+#+TITLE: Writing Files with C
+#+DESCRIPTION: Writing in Org Mode
+#+AUTHOR: Arka Barua
+#+EXPORT_FILE_NAME: /home/arka/filec.html
+#+PROPERTY: header-args :tangle file_1.c
+#+SETUPFILE: https://fniessen.github.io/org-html-themes/org/theme-readtheorg.setup
+
+
+* Header Files
+We are only using the stdio header file for this job.
+#+begin_src c
+#include<stdio.h>
+#+end_src
+* Main Function
+Our main function start
+#+begin_src c
+int main(){
+#+end_src
+
+** File handler
+Fist we have to make a file type pointer.
+But *FILE* is not a data type like int or float.
+It's called a *File handle* which gives us the power to do input-output work in files.
+In C We need a File handler pointer, without this pointer we can't access files.
+#+begin_src c
+FILE *fp;
+#+end_src
+
+** File name or file string
+Next we need to crate a string that is our file name.
+#+begin_src c
+char *filename = "file.txt";
+#+end_src
+
+** Open the file
+To open the file we have to use the *fopen* function.
+Inside the function we need two parameters.
+1. The name of the File
+2. The mode you want o use after opening the file (in this case we want to write so "w")
+The *fopen()* returns a file pointer, so the value to the file pointer is *fp*.
+#+begin_src c
+fp = fopen(fliename, "w");
+#+end_src
+
+** Writing with fprint()
+Now we have our file pointer, we can use *fprintf()* to print text.
+Here we also need two parameters
+1. file pointer (so it knows which file it needs to write)
+2. the text we want to be printed
+ #+begin_src c
+fprintf(fp, "This is a file created by my c programming!");
+fprintf(fp, "I am using org mode to write and document this task.");
+ #+end_src
+
+** Close the file
+At the end we need to close the file by using the *fclose()* function and the parameters of the file which we want to be closed.
+#+begin_src c
+fclose(fp);
+
+return 0;
+}
+#+end_src
