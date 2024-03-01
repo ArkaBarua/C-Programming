@@ -14,7 +14,7 @@
 /*     return 0; */
 /* } */
 
-typedef  struct car{
+typedef struct car1{
 
     char *engine;
     char *fule_type;
